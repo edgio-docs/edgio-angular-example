@@ -4,6 +4,7 @@
     "layer0:dev": "npm run build && layer0 dev",
     "layer0:build": "layer0 build",
     "layer0:deploy": "layer0 deploy layer0-docs",
+    "deploy": "layer0 deploy",
     "ng": "ng",
     "prestart": "ngtw build",
     "prebuild": "node ./prebuild",
