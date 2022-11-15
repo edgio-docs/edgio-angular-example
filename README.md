@@ -4,7 +4,7 @@ A demo deployment of Angular app to Layer0.
 
 ## Demo
 
-https://layer0-docs-layer0-angular-example-default.layer0.link
+https://layer0-docs-layer0-angular-example-default.layer0-limelight.link
 
 ## Try It Now
 
