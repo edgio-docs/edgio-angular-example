@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { CategoryComponent } from './components/category/category.component'
-import { ProductComponent } from './components/product/product.component'
-import { HomeComponent } from './components/home/home.component'
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'category/:name', component: CategoryComponent },
-  { path: 'product/:name', component: ProductComponent },
+  { path: 'about', loadChildren: () => import('./about/about.module').then((m) => m.AboutModule) },
+  { path: 'commerce', loadChildren: () => import('./commerce/commerce.module').then((m) => m.CommerceModule) },
+  { path: '', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule) },
+  { path: 'product', loadChildren: () => import('./product/product.module').then((m) => m.ProductModule) },
 ]
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      initialNavigation: 'enabled',
+      initialNavigation: 'enabledBlocking',
     }),
   ],
   exports: [RouterModule],

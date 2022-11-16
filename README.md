@@ -1,55 +1,27 @@
-# Deploy Angular example to Layer0
+# EdgioAngularExample
 
-A demo deployment of Angular app to Layer0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
-## Demo
+## Development server
 
-https://layer0-docs-layer0-angular-example-default.layer0-limelight.link
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Try It Now
+## Code scaffolding
 
-[![Deploy with Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/layer0-angular-example)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Getting Started
+## Build
 
-### Clone This Repo
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Use `git clone https://github.com/layer0-docs/layer0-angular-example.git` to get the files within this repository onto your local machine.
+## Running unit tests
 
-### Install dependencies
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-On the command line, in the project root directory, run the following command:
+## Running end-to-end tests
 
-```bash
-npm install
-```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### Run the Angular app locally on Layer0
+## Further help
 
-Run the Angular app with the command:
-
-```bash
-npm run layer0:dev
-```
-
-Load the site: http://127.0.0.1:3000
-
-### Testing production build locally with Layer0
-
-You can do a production build of your app and test it locally using:
-
-```bash
-layer0 build && layer0 run --production
-```
-
-Setting --production runs your app exactly as it will be uploaded to the Layer0 cloud using serverless-offline.
-
-## Deploying to Layer0
-
-Deploying requires an account on Layer0. [Sign up here for free](https://app.layer0.co/signup). Once you have an account, you can deploy to Layer0 by running the following in the root folder of your project:
-
-```bash
-layer0 deploy
-```
-
-See [deploying](https://docs.layer0.co/guides/deploying) for more information.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
