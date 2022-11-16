@@ -1,27 +1,55 @@
-# EdgioAngularExample
+# Deploy Angular example to Edgio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+A demo deployment of Angular app to Edgio.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+https://layer0-docs-layer0-angular-example-default.layer0-limelight.link
 
-## Code scaffolding
+## Try It Now
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[![Deploy with Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/edgio-docs/edgio-angular-example)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Clone This Repo
 
-## Running unit tests
+Use `git clone https://github.com/edgio-docs/edgio-angular-example.git` to get the files within this repository onto your local machine.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Install dependencies
 
-## Running end-to-end tests
+On the command line, in the project root directory, run the following command:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+```
 
-## Further help
+### Run the Angular app locally on Edgio
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run the Angular app with the command:
+
+```bash
+npm run edgio:dev
+```
+
+Load the site: http://127.0.0.1:3000
+
+### Testing production build locally with Edgio
+
+You can do a production build of your app and test it locally using:
+
+```bash
+npm run edgio:build && npm run edgio:production
+```
+
+Setting --production runs your app exactly as it will be uploaded to the Edgio cloud using serverless-offline.
+
+## Deploying to Edgio
+
+Deploying requires an account on Edgio. [Sign up here for free](https://app.layer0.co/signup). Once you have an account, you can deploy to Edgio by running the following in the root folder of your project:
+
+```bash
+npm run edgio:deploy
+```
+
+See [deploying](https://docs.edg.io/guides/deploying) for more information.
