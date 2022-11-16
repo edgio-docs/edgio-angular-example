@@ -2,7 +2,7 @@
   "scripts": {
     "edgio:dev": "node compileSW.js edgio dev",
     "edgio:build": "node compileSW.js && edgio build",
-    "edgio:deploy": "node compileSW.js edgio deploy",
+    "edgio:deploy": "node compileSW.js && edgio deploy",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
