@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
@@ -7,21 +8,15 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  data: any = undefined
+  data: any = null
 
-  fetchData(product: any) {
-    if (typeof window !== 'undefined' && product) {
-      fetch(`https://layer0-docs-layer0-ecommmerce-api-example-default.layer0-limelight.link/products/${product}`)
-        .then((res) => res.json())
-        .then((res) => {
-          this.data = res
-        })
-    }
-  }
-
-  constructor(route: ActivatedRoute) {
-    route.url.subscribe((i) => {
-      this.fetchData(i[0].path)
+  constructor(route: ActivatedRoute, private http: HttpClient) {
+    route.url.subscribe(async (i) => {
+      if (i[1].path) {
+        this.data = await this.http
+          .get(`https://layer0-docs-layer0-ecommmerce-api-example-default.layer0-limelight.link/products/${i[1].path}`)
+          .toPromise()
+      }
     })
   }
 
